@@ -5,9 +5,7 @@ fn main() {
     let path = std::env::args().next_back().unwrap();
     let mut replay_file = match File::open(&path){
         Ok(o) => o,
-        Err(e) => {
-            panic!("{}", e);
-        },
+        Err(e) => panic!("{}", e),
     };
     let mut replay_data = Vec::new();
     match replay_file.read_to_end(&mut replay_data){
@@ -21,13 +19,17 @@ fn main() {
 
             let mut output_file = match File::create(format!("fixed-{}", path.as_str())) {
                 Ok(o) => o,
-                Err(e) => {
-                    panic!("{}", e);
-                },
+                Err(e) => panic!("{}", e),
             };
-            output_file.write_all(replay_data.as_slice());
+            match output_file.write_all(replay_data.as_slice()) {
+                Ok(_) => (),
+                Err(e) => panic!("{}", e),
+            }
 
-            output_file.sync_all();
+            match output_file.sync_all() {
+                Ok(_) => (),
+                Err(e) => panic!("{}", e),
+            }
         },
          _ => (),
     }
