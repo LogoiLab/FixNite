@@ -2,7 +2,8 @@ use std::fs::*;
 use std::io::prelude::*;
 
 fn main() {
-    let mut replay_file = match File::open(std::env::args().next_back().unwrap()){
+    let path = std::env::args().next_back().unwrap();
+    let mut replay_file = match File::open(&path){
         Ok(o) => o,
         Err(e) => {
             panic!("{}", e);
@@ -18,7 +19,7 @@ fn main() {
                 replay_data[offset + 2] = 61 as u8;
             }
 
-            let mut output_file = match File::create("foo.test"){
+            let mut output_file = match File::create(format!("fixed-{}", path.as_str())) {
                 Ok(o) => o,
                 Err(e) => {
                     panic!("{}", e);
