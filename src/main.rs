@@ -12,10 +12,10 @@ fn main() {
     match replay_file.read_to_end(&mut replay_data){
         Ok(_) => {
             let offset: usize = 16;
-            if replay_data[offset] != 43 as u8 {
-                replay_data[offset] = 43 as u8;
-                replay_data[offset + 1] = 43 as u8;
-                replay_data[offset + 2] = 62 as u8;
+            if replay_data[offset] != 42 as u8 {
+                replay_data[offset] = 42 as u8;
+                replay_data[offset + 1] = 42 as u8;
+                replay_data[offset + 2] = 61 as u8;
             }
 
             let mut output_file = match File::create("foo.test"){
