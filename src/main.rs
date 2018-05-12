@@ -31,7 +31,7 @@ fn main() {
                 Err(e) => panic!("{}", e),
             }
         },
-         _ => (),
+         Err(e) => panic!("{}", e),
     }
 
 }
