@@ -1,6 +1,11 @@
 [package]
-name = "FixNite-lib"
+name = "fixnite-lib"
 version = "0.1.0"
 authors = ["Chad Baxter <cbaxter@mail.umw.edu>"]
+description = "A library crate for the fixnite project."
+publish = true
+repository = "https://www.github.com/LogoiLab/FixNite"
+license-file = "LICENSE.md"
 
 [dependencies]
+nom = "4.0.0"

@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["Chad Baxter <cbaxter@mail.umw.edu>"]
 
 [dependencies]
+fixnite-lib = "0.1.0"
 
 [profile.release]
 lto = true
