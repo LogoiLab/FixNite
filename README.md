@@ -1,4 +1,5 @@
-#Project FixNite
+Project FixNite
+===
 
 A fortnite replays parser and compatibility layer for older versions of Epic's `.replay` file format.
 
@@ -6,7 +7,8 @@ A fortnite replays parser and compatibility layer for older versions of Epic's `
 
 It currently only functions for upgrading 3.4 replays to 3.5 replays. The chances of anyone running these versions of the game is...nonexistent... But we're making progress.
 
-##Compiling
+Compiling
+---
 
 You're gonna need the Rust toolchain you can get it here:
 
