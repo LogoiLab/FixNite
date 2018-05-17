@@ -3,7 +3,8 @@ Project FixNite
 
 A fortnite replays parser and compatibility layer for older versions of Epic's `.replay` file format.
 
-###This project is in infancy!
+This project is in infancy!
+---
 
 It currently only functions for upgrading 3.4 replays to 3.5 replays. The chances of anyone running these versions of the game is...nonexistent... But we're making progress.
 
