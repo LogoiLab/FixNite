@@ -9,3 +9,4 @@ license-file = "LICENSE.md"
 
 [dependencies]
 nom = "4.0.0"
+grep = "0.1.8"
