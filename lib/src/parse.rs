@@ -13,9 +13,11 @@ pub fn load_file(filename: String) -> ReplayFile {
     let mut f = File::open(&filename).expect("file not found");
     let mut contents = String::new();
     f.read_to_string(&mut contents).expect("something went wrong reading the file");
-    return ReplayFile {
+    let replay_file: ReplayFile = ReplayFile {
         name: filename,
         size: contents.len(),
         content: contents
     };
+
+    replay_file
 }
