@@ -42,3 +42,5 @@ To run the program do the following:
 `./fixnite <some_random_replay_file.replay>`
 
 Where `<some_random_replay_file.replay>` is replaced with the path to a replay you want fixed.
+
+This project is being mirrored on both github and gitlab until github sabilizes under Microsoft ownership.
